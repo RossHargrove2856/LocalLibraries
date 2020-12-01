@@ -38,11 +38,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// set up mongoose connection
-var mongoose = require('mongoose');
-var mongodb = 'database_url';
-mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error:'));
-
 module.exports = app;
